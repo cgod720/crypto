@@ -34,12 +34,12 @@ app.post('/cryptocalculator', (req, res) => {
   })
 })
 
-let number = 0;
-//Route
-app.get('/cryptocalculator/', (req, res) => {
-  number = req.body.num
-  res.redirect('/cryptocalculator')
-})
+// let number = 0;
+// //Route
+// app.get('/cryptocalculator/', (req, res) => {
+//   number = req.body.num
+//   res.redirect('/cryptocalculator')
+// })
 
 //New Route
 app.get('/cryptocalculator/new', (req, res) => {
