@@ -8,7 +8,7 @@ const methodOverride = require('method-override');
 const coinSeed = require("./models/seed.js")
 
 const PORT = process.env.PORT || 3000;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/' + 'crypto'
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/' + 'crypto';
 
 
 
@@ -17,6 +17,10 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
+
+app.get('/', (req, res) => {
+  res.redirect('/cryptocalculator');
+});
 //Index Route
 app.get('/cryptocalculator', (req, res) => {
   Coin.find({}, (err, allCoins) => {
