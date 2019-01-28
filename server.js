@@ -41,6 +41,32 @@ app.get('/cryptocalculator/seed', (req, res) => {
   });
 });
 
+//Edit Route
+app.get('/cryptocalculator/:id/edit', (req, res) => {
+  Coin.findById(req.params.id, (err, foundCoin) => {
+    res.render(
+      'edit.ejs',
+      {
+          coins: foundCoin
+      });
+  });
+});
+
+//Update Route
+app.put('/cryptocalculator/:id', (req, res) => {
+  Coin.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel) => {
+    res.redirect('/cryptocalculator');
+  });
+});
+
+//Delete Route
+app.delete('/cryptocalculator/:id', (req, res) => {
+  Coin.findByIdAndDelete(req.params.id, (err, data) => {
+    res.redirect('/cryptocalculator')
+  });
+});
+
+
 //Show Route
 app.get('/cryptocalculator/:id', (req, res) => {
   Coin.findById(req.params.id, (err, foundCoin) => {

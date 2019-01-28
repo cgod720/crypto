@@ -7,6 +7,12 @@
   <body>
       <h1><%=coins.name%></h1><br/>
       <img src="<%=coins.image%>"/><br/>
-      <p><%=coins.description%></p>
+      <p><%=coins.description%></p><br/>
+      <button><a href="/cryptocalculator/<%=coins.id%>/edit">Edit</a></button>
+      <form action="/cryptocalculator/<%=coins.id%>?_method=DELETE" method="POST">
+        <button>Delete</button><br/>
+      </form>
+      <a href="/cryptocalculator">Back to Main</a>
+
   </body>
 </html>
