@@ -1,16 +1,21 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+
 const mongoose = require('mongoose');
 const Coin = require('./models/coin.js')
 const methodOverride = require('method-override');
 
 const coinSeed = require("./models/seed.js")
 
+const PORT = process.env.PORT || 3000;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/' + 'crypto'
+
+
 
 //Middleware
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 
 //Index Route
 app.get('/cryptocalculator', (req, res) => {
@@ -27,6 +32,13 @@ app.post('/cryptocalculator', (req, res) => {
   Coin.create(req.body, (err, createdCoin) => {
     res.redirect('/cryptocalculator');
   })
+})
+
+let number = 0;
+//Route
+app.get('/cryptocalculator/', (req, res) => {
+  number = req.body.num
+  res.redirect('/cryptocalculator')
 })
 
 //New Route
@@ -78,12 +90,13 @@ app.get('/cryptocalculator/:id', (req, res) => {
 });
 
 //Listener
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log("At your command, Captain.");
+  console.log(PORT);
 })
 
 //Mongo
-mongoose.connect('mongodb://localhost:27017/coin', {useNewUrlParser: true});
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 mongoose.connection.once('open', () => {
   console.log('Mongo up and running');
 })
