@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Crypto Tax Calculator</h1>
+      <nav>
+        <% for(i = 0; i < coins.length; i++) { %>
+            <a href="/cryptocalculator/<%=coins[i].id%>"><%=coins[i].name%></a>
+        <% } %>
+      </nav>
+      <a href="/cryptocalculator/new">Add new asset</a>
+
+  </body>
+</html>

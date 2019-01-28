@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <h1>Add New Crypto Asset</h1>
+      <form action="/cryptocalculator" method="POST">
+        Name: <input type="text" name="name" value=""><br/>
+        Price: <input type="text" name="price" value=""><br/>
+        Image: <input type="text" name="image" value=""><br/>
+        <!-- Description: <input type="text" name="description" value=""><br/> -->
+        Description: <textarea name="description" rows="8" cols="80"></textarea><br/>
+        <input type="submit" value="Create">
+      </form>
+      <a href="/cryptocalculator">Back to Main</a>
+  </body>
+</html>
