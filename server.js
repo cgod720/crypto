@@ -38,12 +38,24 @@ app.post('/cryptocalculator', (req, res) => {
   })
 })
 
-// let number = 0;
-// //Route
-// app.get('/cryptocalculator/', (req, res) => {
-//   number = req.body.num
-//   res.redirect('/cryptocalculator')
-// })
+// let crypto = "";
+// let invested = 0;
+// let numCoins = 0;
+// let price = 0;
+// const tax = .3;
+
+//Calculate Route
+app.post('/cryptocalculator/calculated', (req, res) => {
+  let crypto = req.body.crypto;
+  let invested = req.body.invested;
+  let numCoins = req.body.numCoins;
+  let price = req.body.price;
+  const tax = .3;
+  let costBasis = Number(req.body.invested) / Number(req.body.numCoins);
+  let totalValue = price * numCoins;
+  let result = (totalValue - invested) * tax;
+  res.render('calculated.ejs', req.body);
+})
 
 //New Route
 app.get('/cryptocalculator/new', (req, res) => {
