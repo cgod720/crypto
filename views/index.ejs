@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <% include ./partials/header.ejs %>
+    <title>Crypto Calculator</title>
   </head>
   <body>
-    <h1>Crypto Tax Calculator</h1>
+    <div class="header">
+      <h1>Crypto Tax Calculator</h1>
+    </div>
       <nav>
         <% for(i = 0; i < coins.length; i++) { %>
-            <a href="/cryptocalculator/<%=coins[i].id%>"><%=coins[i].name%></a>
+            <a href="/cryptocalculator/<%=coins[i].id%>" class="indexA"><%=coins[i].name%></a>
         <% } %>
+        <a href="/cryptocalculator/new" class="indexA">Add New</a>
       </nav>
-      <a href="/cryptocalculator/new">Add new asset</a>
-
+      <div class="main">
         <form action="/cryptocalculator/calculated" method="POST">
-            Cryptocurrency: <input type="text" name="crypto" value=""><br/>
-            Amount Invested: <input type="text" name="invested" value=""><br/>
-            Amount of Coins: <input type="text" name="numCoins" value=""><br/>
-            Current Price: <input type="text" name="price" value=""><br/>
-            <p>Tax rate: 30%</p>
-            <input type="submit" value="Calculate">
+            <label>Cryptocurrency: <input type="text" name="crypto" value=""></label><br/>
+            <label>Amount Invested: <input type="text" name="invested" value=""></label><br/>
+            <label>Number of Coins Owned: <input type="text" name="numCoins" value=""></label><br/>
+            <label>Current Price per Coin: <input type="text" name="price" value=""></label><br/>
+            <label>Tax rate: 30%</label><br/>
+            <button class="calc">Calculate</button>
         </form>
+      </div>
 
   </body>
 </html>

@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <% include ./partials/header.ejs %>
+    <title>Calculated</title>
   </head>
   <body>
-    <h1>Results</h1>
-    <p><%=crypto%></p>
-    <p><%=invested%></p>
-    <p><%=numCoins%></p>
-    <p><%=price%></p>
-    Cost Basis: <span><%=Number(invested) / Number(numCoins)%></span>
+    <div class="header center">
+      <h1>Federal Cryptocurrency Captital Gains Tax</h1>
+    </div>
+    <div class="main">
+      <span>Cryptocurrency:  <%=crypto%></span>
+      <span>Amount Invested:  $<%=invested%></span><br/>
+      <span>Coins:  <%=numCoins%></span><br/>
+      <span>Price:  $<%=price%></span><br/>
+      <p>Cost Basis:</p> <p>$<%=Number(invested) / Number(numCoins)%></p>
+      <p>Total Value:</p> <p>$<%=Number(price) * Number(numCoins)%></p>
+      <p>Total Taxable Earnings:</p> <p>$<%=price * numCoins - invested%></p>
+      <p>Federal Tax Obligation:</p> <p>$<%=(price * numCoins - invested) * .3%></p><br/>
+      <a href="/cryptocalculator" class="showA">Back to Main</a>
+    </div>
+
+
 
   </body>
 </html>

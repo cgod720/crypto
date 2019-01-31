@@ -1,0 +1,119 @@
+.header {
+  border-bottom: 6px dotted #ccff00;
+  font-family: 'Orbitron', sans-serif;
+  color: rgba(57, 255, 20);
+  font-size: 30px;
+}
+body {
+  background-color: black;
+}
+
+img {
+  width: 100%;
+}
+
+nav {
+  text-align: center;
+    margin-top: 10px;
+    border-bottom: 6px dotted #ccff00;
+}
+
+label {
+  font-family: 'Electrolize', sans-serif;
+  font-size: 24px;
+  color: rgba(57, 255, 20);
+}
+
+input {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Electrolize';
+  font-size: 30px;
+  text-align: center;
+  color: rgba(57, 255, 20);
+}
+
+a {
+  text-decoration: none;
+}
+
+p, span {
+  font-family: 'Electrolize', sans-serif;
+  color: rgba(57, 255, 20);
+  font-size: 22px;
+}
+
+.main {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 300px;
+  height: 300px;
+  border: 1px dotted black;
+  text-align: center;
+}
+
+.image-wrapper {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.calc {
+  margin-top: 10px;
+  font-size: 30px;
+  font-family: 'Electrolize', sans-serif;
+}
+
+.showh1 {
+  font-family: 'Electrolize', sans-serif;
+  text-align: center;
+  font-size: 50px;
+  color: rgba(57, 255, 20);
+  text-transform: uppercase;
+}
+
+.indexA {
+  text-decoration: overline;
+  font-family: 'Orbitron', sans-serif;
+  padding: 5px;
+  font-size: 30px;
+  color: rgba(57, 255, 20);
+}
+
+.showDesc {
+  font-family: 'Electrolize', sans-serif;
+  text-align: center;
+  font-size: 22px;
+  color: rgba(57, 255, 20);
+}
+
+.showDiv {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.showButton {
+  font-size: 20px;
+  font-family: 'Electrolize', sans-serif;
+  margin-bottom: 20px;
+}
+
+.showA {
+  padding-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Orbitron', sans-serif;
+  color: rgba(57, 255, 20)
+}
+
+.textArea {
+  height: 50px;
+}
+
+.center {
+  text-align: center;
+}

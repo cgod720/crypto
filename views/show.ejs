@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <% include ./partials/header.ejs %>
+    <title><%=coins.name%></title>
   </head>
   <body>
-      <h1><%=coins.name%></h1><br/>
-      <img src="<%=coins.image%>"/><br/>
-      <p><%=coins.description%></p><br/>
-      <button><a href="/cryptocalculator/<%=coins.id%>/edit">Edit</a></button>
-      <form action="/cryptocalculator/<%=coins.id%>?_method=DELETE" method="POST">
-        <button>Delete</button><br/>
-      </form>
-      <a href="/cryptocalculator">Back to Main</a>
+      <h1 class="showh1"><%=coins.name%></h1><br/>
+      <h2>Price: $<%=coins.price%></h2>
+      <div class="image-wrapper">
+        <img src="<%=coins.image%>" class="image"/><br/>
+      </div>
+      <p class="showDesc"><%=coins.description%></p><br/>
+      <div class="showDiv">
+        <button class="showButton"><a href="/cryptocalculator/<%=coins.id%>/edit">Edit</a></button>
+        <form action="/cryptocalculator/<%=coins.id%>?_method=DELETE" method="POST">
+          <button class="showButton">Delete</button><br/>
+        </form>
+        <a href="/cryptocalculator" class="showA">Back to Main</a>
+      </div>
 
   </body>
 </html>
