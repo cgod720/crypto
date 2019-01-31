@@ -1,4 +1,4 @@
-###### Crypto Tax Calculator
+#Crypto Tax Calculator
 
 ##Technologies:
 Built with Node.js, Express, Mongoose, and EJS. Site up and running on Heroku.
