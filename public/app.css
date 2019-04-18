@@ -1,7 +1,7 @@
 .header {
   border-bottom: 6px dotted #ccff00;
   font-family: 'Orbitron', sans-serif;
-  color: rgba(57, 255, 20);
+  color: rgb(57, 255, 20);
   font-size: 30px;
 }
 body {
@@ -21,7 +21,7 @@ nav {
 label {
   font-family: 'Electrolize', sans-serif;
   font-size: 24px;
-  color: rgba(57, 255, 20);
+  color: rgb(57, 255, 20);
 }
 
 input {
@@ -35,7 +35,7 @@ h2 {
   font-family: 'Electrolize';
   font-size: 30px;
   text-align: center;
-  color: rgba(57, 255, 20);
+  color: rgb(57, 255, 20);
 }
 
 a {
@@ -44,7 +44,7 @@ a {
 
 p, span {
   font-family: 'Electrolize', sans-serif;
-  color: rgba(57, 255, 20);
+  color: rgb(57, 255, 20);
   font-size: 22px;
 }
 
@@ -82,14 +82,14 @@ p, span {
   font-family: 'Orbitron', sans-serif;
   padding: 5px;
   font-size: 30px;
-  color: rgba(57, 255, 20);
+  color: rgb(57, 255, 20);
 }
 
 .showDesc {
   font-family: 'Electrolize', sans-serif;
   text-align: center;
   font-size: 22px;
-  color: rgba(57, 255, 20);
+  color: rgb(57, 255, 20);
 }
 
 .showDiv {
@@ -107,7 +107,7 @@ p, span {
   padding-top: 30px;
   margin-bottom: 30px;
   font-family: 'Orbitron', sans-serif;
-  color: rgba(57, 255, 20)
+  color: rgb(57, 255, 20)
 }
 
 .textArea {
